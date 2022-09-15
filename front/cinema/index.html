@@ -18,16 +18,33 @@
         align-items: center;
         flex-direction: column;
         gap: 30px;
+        color: white;
+        font-family: sans-serif;
+        background: #3b3b3b;
       }
       img {
         width: 320px;
         height: 410px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 4px 0px #0000003b;
+        user-select: none;
+      }
+
+      button#change {
+        background: green;
+        color: white;
+        padding: 10px 30px;
+        cursor: pointer;
+        font-size: 25px;
+        border-radius: 2px;
+        border: none;
+        user-select: none;
       }
     </style>
   </head>
   <body>
     <h1>Trouve le titre du film</h1>
-    <img src="" />
+    <img src="" draggable="false"/>
     <button id="change">Change</button>
     <script>
       // Const
