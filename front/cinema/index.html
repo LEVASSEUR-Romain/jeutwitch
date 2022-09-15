@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+      }
+      img {
+        width: 320px;
+        height: 410px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Trouve le titre du film</h1>
+    <img src="" />
+    <button id="change">Change</button>
+    <script>
+      // Const
+      const img = document.querySelector("img");
+      const button = document.querySelector("#change");
+      const urlimg = "http://cinequiz.fb.free.fr/php/imagejeu.php?id=";
+      const ws = new WebSocket("ws://localhost:40510");
+
+      ws.onopen = function () {
+        console.log("websocket is connected ...");
+        ws.send("connected");
+        if (img.attributes.src.value === "") {
+          ws.send("changeFilm");
+        }
+      };
+
+      ws.onmessage = function (ev) {
+        const message = JSON.parse(ev.data);
+        if (message.wstype === "affiche") {
+          img.src = urlimg + message.id;
+        }
+      };
+
+      function changeButton() {
+        ws.send("changeFilm");
+      }
+      button.addEventListener("click", changeButton);
+    </script>
+  </body>
+</html>
