@@ -1,5 +1,5 @@
 const listCommand = require("../../../commun/listCommand");
-const config = require("../../../config");
+const config = require("../../../config/config");
 const { getPlay } = require("../../tools/global/global");
 const commandGlobal = (client, { channel, tags, message, self }, ws) => {
   const findCommand = listCommand.find(

@@ -1,4 +1,4 @@
-const config = require("../../../config");
+const config = require("../../../config/config");
 const listCommand = require("../../../commun/listCommand");
 const { setPlay } = require("../../tools/global/global");
 const rooting = (client, { channel, tags, message, self }, ws) => {

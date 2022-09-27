@@ -2,7 +2,7 @@ const selectMot = require("./selectMot");
 const stringValidMotus = require("../../tools/stringValidMotus/stringValidMotus");
 const { getStringFind, getPlay } = require("../../tools/global/global");
 const listCommand = require("../../../commun/listCommand");
-const config = require("../../../config");
+const config = require("../../../config/config");
 const motus = (client, { channel, tags, message, self }, ws) => {
   if (getPlay() !== "motus") return;
   // change
