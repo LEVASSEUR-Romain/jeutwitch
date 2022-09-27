@@ -1,0 +1,31 @@
+#word {
+    background-color: var(--background-color);
+}
+
+#legend {
+    background-color: var(--background-color);
+}
+
+
+#legend ul li {
+    list-style-type: none;
+    display: flex;
+}
+
+#letterGood, #letterNot, #letterFalse {
+    width: 16px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+#letterGood {
+    background-color: green;
+}
+
+#letterNot {
+    background-color: yellow;
+}
+
+#letterFalse {
+    background-color: red;
+}

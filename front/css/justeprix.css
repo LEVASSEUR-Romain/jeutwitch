@@ -1,0 +1,13 @@
+#describe {
+    background-color: var(--background-color);
+    width: 400px;
+}
+
+.imgArticle {
+    width: 300px;
+    height: 300px;
+}
+
+#prix {
+    background-color: var(--background-color);
+}

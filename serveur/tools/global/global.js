@@ -1,7 +1,7 @@
-const setFindFilm = (film) => {
+const setStringFind = (film) => {
   global.filmToFind = film;
 };
-const getFindFilm = () => {
+const getStringFind = () => {
   if (global.filmToFind) {
     return filmToFind;
   }
@@ -26,10 +26,23 @@ const getClientTwitch = () => {
   return false;
 };
 
+const setPlay = (play) => {
+  global.globalPlay = play;
+};
+
+const getPlay = () => {
+  if (global.globalPlay) {
+    return globalPlay;
+  }
+  return false;
+};
+
 module.exports = {
-  setFindFilm,
-  getFindFilm,
+  setStringFind,
+  getStringFind,
   setClientTwitch,
   isClientTwitch,
   getClientTwitch,
+  getPlay,
+  setPlay,
 };

@@ -1,5 +1,5 @@
 const fetch = require("node-fetch");
-const { setFindFilm } = require("../../tools/global/global");
+const { setStringFind } = require("../../tools/global/global");
 const returnFilm = async () => {
   // liens
   const urlCinema = "http://cinequiz.fb.free.fr/php/apiCinema?req=film";
@@ -9,8 +9,9 @@ const returnFilm = async () => {
   if (json === null || json.error) {
     return returnFilm();
   }
-  json.wstype = "affiche";
-  setFindFilm(json.titre);
+  json.statut = "changeFilm";
+  json.requete = "serveur";
+  setStringFind(json.titre);
   return JSON.stringify(json);
 };
 module.exports = returnFilm;
