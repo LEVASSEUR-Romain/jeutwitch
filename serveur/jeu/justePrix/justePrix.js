@@ -2,7 +2,7 @@ const returnJustePrix = require("./returnJusteprix");
 const stringValidJustePrix = require("../../tools/stringValidJustePrix/stringValidJustePrix");
 const { getStringFind, getPlay } = require("../../tools/global/global");
 const listCommand = require("../../../commun/listCommand");
-const config = require("../../config");
+const config = require("../../../config");
 const justePrix = (client, { channel, tags, message, self }, ws) => {
   if (getPlay() !== "justeprix") return;
   // change

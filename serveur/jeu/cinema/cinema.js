@@ -2,7 +2,7 @@ const returnFilm = require("./returnFilm");
 const listCommand = require("../../../commun/listCommand");
 const { getStringFind, getPlay } = require("../../tools/global/global");
 const stringValidSome = require("../../tools/stringValidSome/stringValidSome");
-const config = require("../../config");
+const config = require("../../../config");
 const cinema = async (client, { channel, tags, message, self }, ws) => {
   if (getPlay() !== "cinema") return;
   if (

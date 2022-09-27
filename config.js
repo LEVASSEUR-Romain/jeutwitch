@@ -2,7 +2,7 @@
 // username : votre pseudo
 const config = {
   username: "Eurostar02",
-  token: "",
+  token: "oauth:",
   channels: ["Eurostar02"],
 };
 module.exports = config;
